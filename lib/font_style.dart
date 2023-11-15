@@ -1,10 +1,11 @@
+import 'custom_color.dart';
 import 'package:flutter/material.dart';
 
 const textSt1 = TextStyle(
   fontSize: 26,
   fontFamily: 'Poppins',
   fontWeight: FontWeight.bold,
-  color: Colors.red,
+  color: bloodyRed,
 
 );
 const textSt2 = TextStyle(
@@ -24,7 +25,7 @@ const navText = TextStyle(
 const author = TextStyle(
   fontSize: 12,
   fontFamily: 'Poppins',
-  fontWeight: FontWeight.w300,
+  fontWeight: FontWeight.w200,
   color: Colors.black,
 
 );

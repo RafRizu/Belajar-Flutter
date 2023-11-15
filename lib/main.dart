@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'font_style.dart';
 
 void main() {
@@ -11,8 +12,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
         debugShowCheckedModeBanner: false,
+
         title: 'Flutter Demo',
         theme: ThemeData(
           // This is the theme of your application.
@@ -60,6 +63,7 @@ class MyApp extends StatelessWidget {
                   left: 20.0, top: 30.0, right: 23.0, bottom: 0),
               // margin: const EdgeInsets.only(left:40.0,top: 0,right: 0,bottom: 0 ),
               child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image(
                     image: AssetImage('assets/images/82.png'),
