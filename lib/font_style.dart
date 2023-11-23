@@ -29,3 +29,29 @@ const author = TextStyle(
   color: Colors.black,
 
 );
+
+const place = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w700,
+  color: Color(0xFF000000),
+  
+);
+
+const address = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w300,
+  color: Color(0xFF000000),
+  
+);
+const rating = TextStyle(
+  color: Colors.black,
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  
+);
+const textSub1 = TextStyle(
+  color: Color(0xFF00A3FF),
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  
+);

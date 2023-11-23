@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_2/chatty.dart';
+import 'package:flutter_application_2/home_page.dart';
 import 'font_style.dart';
 
 void main() {
@@ -12,109 +14,94 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
+    // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        fontFamily: 'Poppins',
 
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // TRY THIS: Try running your application with "flutter run". You'll see
-          // the application has a blue toolbar. Then, without quitting the app,
-          // try changing the seedColor in the colorScheme below to Colors.green
-          // and then invoke "hot reload" (save your changes or press the "hot
-          // reload" button in a Flutter-supported IDE, or press "r" if you used
-          // the command line to start the app).
-          //
-          // Notice that the counter didn't reset back to zero; the application
-          // state is not lost during the reload. To reset the state, use hot
-          // restart instead.
-          //
-          // This works for code too, not just values: Most code changes can be
-          // tested with just a hot reload.
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color.fromARGB(255, 226, 57, 57)),
-          useMaterial3: true,
-        ),
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text(
-              "Mohammad Rafi'",
-              style: navText,
-            ),
-            flexibleSpace: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color.fromARGB(255, 188, 20, 8), Color.fromARGB(255, 121, 52, 240)],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-            ),
-            // backgroundColor: Colors.red,
-            actions: <Widget>[
-              IconButton(onPressed: () {}, icon: const Icon(Icons.mail)),
-            ],
-          ),
-          body: SafeArea(
-            child: Container(
-              padding: const EdgeInsets.only(
-                  left: 20.0, top: 30.0, right: 23.0, bottom: 0),
-              // margin: const EdgeInsets.only(left:40.0,top: 0,right: 0,bottom: 0 ),
-              child: const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Image(
-                    image: AssetImage('assets/images/82.png'),
-                    width: 400,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 20.0),
-                    child: Text("Tragedi UCL 2020", style: textSt1),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 6.0),
-                        child: Text(
-                          "by : RafRizu",
-                          style: author,
-                          textAlign: TextAlign.right,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 6.0),
-                        child: Text(
-                          "08 November 2023",
-                          style: author,
-                          textAlign: TextAlign.right,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 8.0),
-                    child: Text(
-                      "Pada tahun 2020, FC Barcelona menghadapi Bayern Munich dalam Liga Champions (UCL), tetapi sayangnya mereka mengalami kekalahan yang sangat mencolok. Pertandingan tersebut dikenal dengan sebutan Tragedi UCL 2020, di mana Bayern Munich berhasil mengalahkan Barcelona dengan skor yang cukup besar, mencerminkan perbedaan performa yang mencolok di lapangan. Kekalahan tersebut memicu berbagai diskusi dan perbincangan di kalangan penggemar sepakbola dan menjadi salah satu momen yang dikenang dalam sejarah kompetisi tersebut.",
-                      style: textSt2,
-                      textAlign: TextAlign.justify,
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-        )
-        // child: Image(
-        //   image: AssetImage('assets/images/82.png'),
-        //   width: 400,
-        // ),
-        //  const MyHomePage(title: 'RafRizu'),
-        );
+        useMaterial3: true,
+      ),
+      home: const Chatty(),
+    );
   }
 }
+      // Scaffold(
+      //   appBar: AppBar(
+      //     title: const Text(
+      //       "Mohammad Rafi'",
+      //       style: navText,
+      //     ),
+      //     flexibleSpace: Container(
+      //       decoration: const BoxDecoration(
+      //         gradient: LinearGradient(
+      //           colors: [Color.fromARGB(255, 188, 20, 8), Color.fromARGB(255, 121, 52, 240)],
+      //           begin: Alignment.topLeft,
+      //           end: Alignment.bottomRight,
+      //         ),
+      //       ),
+      //     ),
+      //     // backgroundColor: Colors.red,
+      //     actions: <Widget>[
+      //       IconButton(onPressed: () {}, icon: const Icon(Icons.mail)),
+      //     ],
+      //   ),
+      //   body: SafeArea(
+      //     child: Container(
+      //       padding: const EdgeInsets.only(
+      //           left: 20.0, top: 30.0, right: 23.0, bottom: 0),
+      //       // margin: const EdgeInsets.only(left:40.0,top: 0,right: 0,bottom: 0 ),
+      //       child: const Column(
+      //         // mainAxisAlignment: MainAxisAlignment.center,
+      //         children: <Widget>[
+      //           Image(
+      //             image: AssetImage('assets/images/82.png'),
+      //             width: 400,
+      //           ),
+      //           Padding(
+      //             padding: EdgeInsets.only(top: 20.0),
+      //             child: Text("Tragedi UCL 2020", style: textSt1),
+      //           ),
+      //           Row(
+      //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //             children: [
+      //               Padding(
+      //                 padding: EdgeInsets.only(top: 6.0),
+      //                 child: Text(
+      //                   "by : RafRizu",
+      //                   style: author,
+      //                   textAlign: TextAlign.right,
+      //                 ),
+      //               ),
+      //               Padding(
+      //                 padding: EdgeInsets.only(top: 6.0),
+      //                 child: Text(
+      //                   "08 November 2023",
+      //                   style: author,
+      //                   textAlign: TextAlign.right,
+      //                 ),
+      //               ),
+      //             ],
+      //           ),
+      //           Padding(
+      //             padding: EdgeInsets.only(top: 8.0),
+      //             child: Text(
+      //               "Pada tahun 2020, FC Barcelona menghadapi Bayern Munich dalam Liga Champions (UCL), tetapi sayangnya mereka mengalami kekalahan yang sangat mencolok. Pertandingan tersebut dikenal dengan sebutan Tragedi UCL 2020, di mana Bayern Munich berhasil mengalahkan Barcelona dengan skor yang cukup besar, mencerminkan perbedaan performa yang mencolok di lapangan. Kekalahan tersebut memicu berbagai diskusi dan perbincangan di kalangan penggemar sepakbola dan menjadi salah satu momen yang dikenang dalam sejarah kompetisi tersebut.",
+      //               style: textSt2,
+      //               textAlign: TextAlign.justify,
+      //             ),
+      //           )
+      //         ],
+      //       ),
+      //     ),
+      //   ),
+      // )
+      // child: Image(
+      //   image: AssetImage('assets/images/82.png'),
+      //   width: 400,
+      // ),
+      //  const MyHomePage(title: 'RafRizu'),
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -200,6 +187,25 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class CobaFigma extends StatelessWidget {
+  const CobaFigma({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          child: Column(
+            children: <Widget>[
+              Image(image: AssetImage('assets/images/pantai.png')),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
