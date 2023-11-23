@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_2/chat_open.dart';
 import 'package:flutter_application_2/chatty.dart';
 import 'package:flutter_application_2/home_page.dart';
 import 'font_style.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Poppins',
 
-        useMaterial3: true,
+        useMaterial3: false,
       ),
       home: const Chatty(),
     );
